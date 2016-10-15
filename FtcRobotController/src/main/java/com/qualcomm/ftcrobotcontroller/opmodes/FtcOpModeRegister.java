@@ -64,6 +64,8 @@ public class FtcOpModeRegister implements OpModeRegister {
     //manager.register ("PushBotManual", PushBotManual.class);
 
     manager.register("Summer_robotics",Summer_robotics.class);
+    manager.register("SummerRoboticObjects",SummerRoboticObjects.class);
+    manager.register("OpmodeForward",OpmodeForward.class);
 
     /*
      * Uncomment any of the following lines if you want to register an op mode.
@@ -87,7 +89,7 @@ public class FtcOpModeRegister implements OpModeRegister {
     //manager.register ("PushBotManual1", PushBotManual1.class);
     //manager.register ("PushBotAutoSensors", PushBotAutoSensors.class);
     //manager.register ("PushBotIrEvent", PushBotIrEvent.class);
-
+    manager.register("gyrocode",GyroCheck.class);
     //manager.register ("PushBotManualSensors", PushBotManualSensors.class);
     //manager.register ("PushBotOdsDetectEvent", PushBotOdsDetectEvent.class);
     //manager.register ("PushBotOdsFollowEvent", PushBotOdsFollowEvent.class);

@@ -1,16 +1,36 @@
+
+
 package com.qualcomm.ftcrobotcontroller.opmodes;
-
-
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
-import com.qualcomm.robotcore.hardware.DcMotor;
-/**
- * Created by wolfie on 9/3/16.
- */
 
-public class OpmodeForward {
+public class OpmodeForward extends OpMode {
+
+
+
+    MapLoader mapLoader;
 
     @Override
-    public void init(){
+    public void init() {
+        mapLoader = new MapLoader(hardwareMap);
+    }
+
+    @Override
+    public void loop() {
+
+            /*
+            AutoForwardReader reader = new AutoForwardReader();
+
+            AutoForwardSample sample = reader.read();
+
+            AutoForwardProcessor processor = new AutoForwardProcessor();
+             */
+
+            Command command = new Command();
+            command.powerLevelRight = 1.0;
+            command.powerLevelLeft = 1.0;
+
+            Runner runner = new Runner(mapLoader);
+            runner.execute(command);
 
     }
 
